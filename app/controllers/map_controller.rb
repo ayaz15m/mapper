@@ -1,5 +1,8 @@
 class MapController < ApplicationController
   def index
+    results = Geocoder.search "Houston"
+    @lat = results.first.geometry["location"]["lat"].to_f
+    @lng = results.first.geometry["location"]["lng"].to_f
   end
 
   def search
@@ -10,10 +13,6 @@ class MapController < ApplicationController
       @lat = results.first.geometry["location"]["lat"].to_f
       @lng = results.first.geometry["location"]["lng"].to_f
       render :index
-    else
-      redirect_to root_path
     end
   end
-
-
 end
