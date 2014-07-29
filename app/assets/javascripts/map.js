@@ -3,16 +3,7 @@ $(window).ready(function(){
 
   var lat = $("#foo").data("lat");
   var lng = $("#boo").data("lng");
-  var search = $("#too").data("search");
 
-  // if (lat == null){
-  //   var map = L.map('map').setView([29.7628, -95.3831, 13);
-  //   L.marker([lat, lng]).addTo(map)
-  // }
-  // else{
-  //   var map = L.map('map').setView([lat, lng], 13);
-  //   L.marker([lat, lng]).addTo(map)
-  // }
   var map = L.map('map').setView([lat, lng], 13);
 
 
